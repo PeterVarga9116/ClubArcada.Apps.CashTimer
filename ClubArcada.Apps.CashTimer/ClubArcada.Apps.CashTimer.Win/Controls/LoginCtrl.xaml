@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="ClubArcada.Apps.CashTimer.Win.Controls.LoginCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClubArcada.Apps.CashTimer.Win.Controls"
+             mc:Ignorable="d" 
+             Background="Black"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="260"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+
+            <local:TextBoxCtrl Grid.Row="0" Label="Email" />
+            <local:TextBoxCtrl Grid.Row="1" Label="Password" />
+            <Button Style="{StaticResource btnGreen}" Content="LOGIN" Grid.Row="3" Click="Button_Click"></Button>
+
+        </Grid>
+
+    </Grid>
+</UserControl>
