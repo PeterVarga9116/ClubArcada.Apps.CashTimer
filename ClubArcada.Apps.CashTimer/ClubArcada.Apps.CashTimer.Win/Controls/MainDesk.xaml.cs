@@ -69,7 +69,7 @@ namespace ClubArcada.Apps.CashTimer.Win.Controls
 
             if(dlg.DialogResult.True())
             {
-                CashTables.Add(CashTable.New(App.CashGame.Id, App.User.Id, "1", eCashTableGameType.Type02));
+                CashTables.Add(dlg.CashTable);
                 Refresh();
 
                 if(CashTables.Count() == 1)
@@ -81,7 +81,7 @@ namespace ClubArcada.Apps.CashTimer.Win.Controls
 
         private void btnAddPlayer_Click(object sender, RoutedEventArgs e)
         {
-            CashTables.First().CashPlayers.Add(new CashPlayerDto(App.User.Id, CashTables.First().Id, Guid.NewGuid()));
+            CashTables.SingleOrDefault(ct => ct.Id == _selectedCashTableId).CashPlayers.Add(new CashPlayerDto(App.User.Id, CashTables.First().Id, Guid.NewGuid()));
             Refresh();
         }
 

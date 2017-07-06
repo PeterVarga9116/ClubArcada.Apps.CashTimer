@@ -60,7 +60,7 @@
                                         <Border Name="brMain" Margin="2" Height="45" Padding="2" Background="#262626" BorderBrush="DarkGray" BorderThickness="0" CornerRadius="0">
                                             <Grid>
                                                 <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="150"/>
+                                                    <ColumnDefinition Width="200"/>
                                                     <ColumnDefinition Width="*"/>
                                                     <ColumnDefinition Width="auto"/>
                                                 </Grid.ColumnDefinitions>
@@ -69,8 +69,8 @@
                                                     <RowDefinition Height="*"/>
                                                 </Grid.RowDefinitions>
 
-                                                <TextBlock VerticalAlignment="Center" Text="Peter Varga ~ Peti WTF" Foreground="White" />
-                                                <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="{Binding Points}" Foreground="White" />
+                                                <TextBlock FontWeight="Bold" VerticalAlignment="Center" Text="Peter Varga ~ Peti WTF" Foreground="White" />
+                                                <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="{Binding PlayTimeDisplayName}" Foreground="White" />
 
                                                 <StackPanel Grid.Column="2" Orientation="Horizontal" Grid.RowSpan="2">
 
